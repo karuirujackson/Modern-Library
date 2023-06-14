@@ -19,7 +19,7 @@ class Media {
     toggleCheckOutStatus(){
         return this._isCheckedOut = !this._isCheckedOut
     }
-    getAverageRating(){
+    getAverageRating(){  
         let sumOfRatings = this._ratings.reduce(
             (accumulator, currentValue) => accumulator + currentValue,
     0,
@@ -64,16 +64,10 @@ class CD extends Media {
     constructor (artist, title){
         super(title);
         this._artist = artist;
-        this._songs = [];
+        this._songs = ["Phresh Out the Runway","Diamonds","Numb", "Pour It Up","Loveeeeeee Song"];
     }
     get artist(){
         return this._artist;
-    }
-    get songs(){
-        return this._songs;
-    }
-    set songs(songArray){
-        return this._songs = songArray;
     }
     shuffle (){
         
@@ -99,9 +93,10 @@ console.log(speed.getAverageRating().toFixed(1));
 
 const unapologetic = new CD('Rihanna', 'Unapologetic')
 console.log(unapologetic);
-let songArray = ["Phresh Out the Runway","Diamonds","Numb", "Pour It Up","Loveeeeeee Song"];
-songArray = this._songs;
-console.log(unapologetic.songs);
+unapologetic.addRating(4);
+unapologetic.addRating(3.5);
+unapologetic.addRating(5);
+console.log(unapologetic.getAverageRating().toFixed(1));
 
 /*let array1 = [15, 30, 45, 60, 75]
 let arraySum = array1.reduce(
