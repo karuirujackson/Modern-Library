@@ -21,14 +21,14 @@ class Media {
     }
     getAverageRating(){  
         let sumOfRatings = this._ratings.reduce(
-            (accumulator, currentValue) => accumulator + currentValue,
+            (accumulator, rating) => accumulator + rating,
     0,
         ); 
         let averageRating = sumOfRatings / this.ratings.length;
         return averageRating;
     }
-    addRating(newRate){
-        this.ratings.push(newRate)
+    addRating(newRating){
+        this.ratings.push(newRating)
     }
 };
 
