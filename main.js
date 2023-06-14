@@ -47,9 +47,10 @@ class Book extends Media {
 };
 
 class Movie extends Media {
-    constructor (director, title, runtime){
+    constructor (director, title, movieCast, runtime){
         super(title);
         this._director = director;
+        this._movieCast = movieCast;
         this._runTime = runtime;
     }
     get director(){
@@ -61,16 +62,17 @@ class Movie extends Media {
 };
 
 class CD extends Media {
-    constructor (artist, title){
+    constructor (artist, title, producer){
         super(title);
         this._artist = artist;
         this._songs = ["Phresh Out the Runway","Diamonds","Numb", "Pour It Up","Loveeeeeee Song"];
+        this._producer = producer;
     }
     get artist(){
         return this._artist;
     }
     shuffle (){
-        
+       return Math.random()* this._artist; 
     }
 };
 
