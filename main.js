@@ -72,6 +72,12 @@ class CD extends Media {
     get songs(){
         return this._songs;
     }
+    set songs(songArray){
+        return this._songs = songArray;
+    }
+    shuffle (){
+        
+    }
 };
 
 const historyOfEverything = new Book('Bill Bryson', 'A Short History of Nearly Everything', 544);
@@ -90,6 +96,12 @@ speed.addRating(1);
 speed.addRating(1);
 speed.addRating(5);
 console.log(speed.getAverageRating().toFixed(1));
+
+const unapologetic = new CD('Rihanna', 'Unapologetic')
+console.log(unapologetic);
+let songArray = ["Phresh Out the Runway","Diamonds","Numb", "Pour It Up","Loveeeeeee Song"];
+songArray = this._songs;
+console.log(unapologetic.songs);
 
 /*let array1 = [15, 30, 45, 60, 75]
 let arraySum = array1.reduce(
